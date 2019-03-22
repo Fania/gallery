@@ -15,29 +15,31 @@
     <nav class="next">&gt;</nav>
   </section>
 
-  <form id="settings">
-    <span>Overall gallery width: </span>
-    <input id="gall_width" type="text" placeholder="90vw">
-    <!-- <br> -->
-    <span>Image width: </span>
-    <input id="img_width" type="text" placeholder="30vw"> 
-    <span>Image height: </span>
-    <input id="img_height" type="text" placeholder="200px">
-    <!-- <br> -->
-    <span>Spacing between images: </span>
-    <input id="space_between" type="text" placeholder="10px">
-    <!-- <br>
-    <span>Gallery background colour: </span>
-    <input id="gall_back" type="color" value="#FFFFFF"> -->
-    <!-- <br> -->
-    <span>Gallery highlight colour: </span>
-    <input id="gall_high" type="color" value="#add8e6">
-    <!-- <br> -->
-    <span></span>
-    <input type="submit" value="Submit">
-  </form>
+  <section class="customisation">
+    <form id="settings">
+      <span>Overall gallery width: </span>
+      <input id="gall_width" type="text" placeholder="90vw">
+      <!-- <br> -->
+      <span>Image width: </span>
+      <input id="img_width" type="text" placeholder="30vw"> 
+      <span>Image height: </span>
+      <input id="img_height" type="text" placeholder="200px">
+      <!-- <br> -->
+      <span>Spacing between images: </span>
+      <input id="space_between" type="text" placeholder="10px">
+      <!-- <br>
+      <span>Gallery background colour: </span>
+      <input id="gall_back" type="color" value="#FFFFFF"> -->
+      <!-- <br> -->
+      <span>Gallery highlight colour: </span>
+      <input id="gall_high" type="color" value="#add8e6">
+      <!-- <br> -->
+      <span></span>
+      <input type="submit" value="Submit">
+    </form>
+    <pre><code id="code_preview"></code></pre>
+  </section>
 
-  <pre><code id="code_preview"></code></pre>
 
   <!-- <p>This gallery can be customised for height, width, colours, images, and hyperlinks.</p>
   <p>To do this, change the values of the variables in the <code>:root</code> selector in the CSS. Then, change the values in the list of images <code>image_list</code> in the JavaScript. Each value consists of two URL, the first is the path to the image, the second is the URL you'd like to link to.</p>

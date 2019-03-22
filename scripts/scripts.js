@@ -122,6 +122,7 @@ form.addEventListener("submit", ()=> {
   `;
 
   preview.innerText = code;
+  preview.parentElement.style.width = "50%";
 
   input_style.innerHTML = code;
   event.preventDefault();

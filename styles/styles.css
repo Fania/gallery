@@ -116,14 +116,22 @@ body{margin: 0}
 
 
 
-pre {
+
+
+.customisation {
+  display: flex;
+  justify-content: flex-start;
   margin: 5%;
+}
+
+pre {
+  margin: 0;
   padding-top: 0;
   background: white;
 }
 
 form {
-  margin: 5%;
+  width: 50%;
   display: grid;
   grid-template-columns: 180px 100px;
   grid-template-rows: 2em;
