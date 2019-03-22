@@ -124,6 +124,10 @@ pre {
 
 form {
   margin: 5%;
+  display: grid;
+  grid-template-columns: 180px 100px;
+  grid-template-rows: 2em;
+  align-items: center;
 }
 
 input[type="text"] {
@@ -135,7 +139,7 @@ input[type="text"] {
 }
 input[type="color"] {
   height: calc(1em + 6px);
-  width: 50px;
+  width: 54px;
   margin: 5px;
 }
 input[type="color"]::-webkit-color-swatch-wrapper {
@@ -143,6 +147,10 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 }
 input[type="color"]::-webkit-color-swatch {
 	border: none;
+}
+input[type="submit"] {
+  margin: 5px;
+  width: 60px;
 }
 input::placeholder {
   color: #ccc;
