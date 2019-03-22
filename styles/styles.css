@@ -13,7 +13,7 @@ body{margin: 0}
   --gallery_height: calc(var(--image_height) + 20px);
  	--gallery_width: 90vw;
   --gallery_background: transparent;
-  --gallery_highlight: lightblue;
+  --gallery_highlight: #add8e6;
 
   --button_color: rgba(0,0,0,0.6);
   --button_width: 50px;
@@ -111,4 +111,39 @@ body{margin: 0}
 }
 .gallery nav.prev:hover, .gallery nav.next:hover {
   color: var(--gallery_highlight);
+}
+
+
+
+
+pre {
+  margin: 5%;
+  padding-top: 0;
+  background: white;
+}
+
+form {
+  margin: 5%;
+}
+
+input[type="text"] {
+  height: 1em;
+  width: 50px;
+  margin: 5px;
+  text-align: center;
+  padding: 3px;
+}
+input[type="color"] {
+  height: calc(1em + 6px);
+  width: 50px;
+  margin: 5px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+input::placeholder {
+  color: #ccc;
 }
