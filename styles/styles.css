@@ -85,59 +85,32 @@ body{margin: 0}
 
 /* PREV AND NEXT BUTTONS */
 .gallery nav.prev, .gallery nav.next {
-  position: absolute;
-	top: 0;
-	margin: 0;
-  cursor: pointer;
-  color: white;
-  width: var(--button_width);
-	height: var(--button_width);
-  display: inline-block;
-  font-size: 3em;
-  font-weight: bold;
-  line-height: var(--button_width);
-  background: var(--button_color);
-  border-radius: 50%;
-  text-align: center;
-}
-.gallery nav.prev {
-  top: calc(var(--gallery_height)/2 - var(--button_height)/2);
-	left: 10px;
-	/* left: calc(var(--offset)/2 - var(--button_width)/2); */
-}
-.gallery nav.next {
-  top: calc(var(--gallery_height)/2 - var(--button_height)/2);
-	right: 10px;
-}
-.gallery nav.prev:hover, .gallery nav.next:hover {
-  color: var(--gallery_highlight);
+  display: none;
 }
 
 
 
 
 
+/* SETTINGS PANE */
 
 .customisation {
   display: flex;
   justify-content: flex-start;
+  flex-direction: column;
   margin: 5%;
 }
-
 pre {
-  margin: 0;
+  margin: 40px 0;
   padding-top: 0;
   background: white;
 }
-
 form {
-  width: 50%;
   display: grid;
   grid-template-columns: 180px 100px;
   grid-template-rows: 2em;
   align-items: center;
 }
-
 input[type="text"] {
   height: 1em;
   width: 50px;
@@ -162,4 +135,50 @@ input[type="submit"] {
 }
 input::placeholder {
   color: #ccc;
+}
+
+
+/* RESPONSIVENESS */
+
+@media screen and (min-width: 640px) {
+
+  .customisation {
+    flex-direction: row;
+  }
+
+  pre {
+    margin: 0;
+  }
+
+  .gallery nav.prev, .gallery nav.next {
+    display: none;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    cursor: pointer;
+    color: white;
+    width: var(--button_width);
+    height: var(--button_width);
+    display: inline-block;
+    font-size: 3em;
+    font-weight: bold;
+    line-height: var(--button_width);
+    background: var(--button_color);
+    border-radius: 50%;
+    text-align: center;
+  }
+  .gallery nav.prev {
+    top: calc(var(--gallery_height)/2 - var(--button_height)/2);
+    left: 10px;
+    /* left: calc(var(--offset)/2 - var(--button_width)/2); */
+  }
+  .gallery nav.next {
+    top: calc(var(--gallery_height)/2 - var(--button_height)/2);
+    right: 10px;
+  }
+  .gallery nav.prev:hover, .gallery nav.next:hover {
+    color: var(--gallery_highlight);
+  }
+
+
 }

@@ -118,11 +118,11 @@ form.addEventListener("submit", ()=> {
     --image_width: ${!iw.value=="" ? iw.value : "30vw"};
     --gallery_width: ${!gw.value=="" ? gw.value : "90vw"};
     --gallery_highlight: ${gh.value};
-  }
-  `;
+  }`;
 
   preview.innerText = code;
-  preview.parentElement.style.width = "50%";
+  preview.parentElement.style.width = "100%";
+  // preview.parentElement.style.width = "50%";
 
   input_style.innerHTML = code;
   event.preventDefault();
