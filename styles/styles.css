@@ -1,32 +1,30 @@
 p {margin: 5%}
 code {font-family: monospace}
 body {background: beige}
-
-/* customise these variables if required */
-
 body{margin: 0}
 
-:root {
+
+/* customise these variables if required */
+.gallery {
+  --spacebetween: 10px;
   --image_height: 300px;
   --image_width: 30vw;
-
-  --gallery_height: calc(var(--image_height) + 20px);
- 	--gallery_width: 90vw;
-  --gallery_background: transparent;
+  --gallery_width: 90vw;
   --gallery_highlight: #add8e6;
-
-  --button_color: rgba(0,0,0,0.6);
-  --button_width: 50px;
-  --button_height: var(--button_width);
-
-  --offset: calc((var(--gallery_width) - var(--image_width)) / 2);
-  
-  --spacebetween: 10px;
 }
 
 /* -------------- ATTENTION ---------------*/
 /* DO NOT TOUCH ANYTHING BELOW THIS NOTICE */
 /* --------------------------------------- */
+
+.gallery {
+  --gallery_background: transparent;
+  --gallery_height: calc(var(--image_height) + 20px);
+  --button_color: rgba(0,0,0,0.6);
+  --button_width: 50px;
+  --button_height: var(--button_width);
+  --offset: calc((var(--gallery_width) - var(--image_width)) / 2);
+}
 
 /* CONTAINER */
 .gallery {
@@ -138,6 +136,23 @@ input::placeholder {
 }
 
 
+
+
+
+#examples {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+  margin-top: -3%;
+}
+#examples img {
+  padding: 10px 0;
+}
+
+
+
+
+
 /* RESPONSIVENESS */
 
 @media screen and (min-width: 640px) {
@@ -178,6 +193,18 @@ input::placeholder {
   }
   .gallery nav.prev:hover, .gallery nav.next:hover {
     color: var(--gallery_highlight);
+  }
+
+  #examples {
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  #examples img {
+    cursor: pointer;
+    width: 30%;
+  }
+  #examples img:hover {
+    filter: drop-shadow(8px 8px 10px #111);
   }
 
 

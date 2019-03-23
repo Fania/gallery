@@ -112,7 +112,7 @@ const gh = document.getElementById("gall_high");
 form.addEventListener("submit", ()=> {
 
   const code = `
-  :root {
+  .gallery {
     --spacebetween: ${!sb.value=="" ? sb.value : "10px"};
     --image_height: ${!ih.value=="" ? ih.value : "300px"};
     --image_width: ${!iw.value=="" ? iw.value : "30vw"};
@@ -128,3 +128,41 @@ form.addEventListener("submit", ()=> {
   event.preventDefault();
 });
 
+
+
+
+// EXAMPLES
+
+const exa = document.getElementById("examples");
+
+for (let i=0; i < exa.children.length; i++) {
+  exa.children[i].addEventListener("click", ()=> {
+    const code1 = `
+    .gallery {
+      --spacebetween: 10px;
+      --image_height: 300px;
+      --image_width: 30vw;
+      --gallery_width: 90vw;
+      --gallery_highlight: lightblue;
+    }`;
+    const code2 = `
+    .gallery {
+      --spacebetween: 5px;
+      --image_height: 300px;
+      --image_width: 70vw;
+      --gallery_width: 90vw;
+      --gallery_highlight: violet;
+    }`;
+    const code3 = `
+    .gallery {
+      --spacebetween: 0px;
+      --image_height: 300px;
+      --image_width: 100vw;
+      --gallery_width: 100vw;
+      --gallery_highlight: mediumspringgreen;
+    }`;
+    preview.innerText = eval(`code${i+1}`);
+    preview.parentElement.style.width = "100%";
+    input_style.innerHTML = eval(`code${i+1}`);
+  });
+}
