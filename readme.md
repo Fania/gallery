@@ -35,9 +35,9 @@ That's it!
 
 5. customise the CSS variables at the top of the CSS file with the relevant styles you'd like. Use the [Gallery Helper Tool](https://front-end-materials.github.io/gallery/) to find the right variables values
 
-6. copy the full contents of the JavaScript file over as is
+6. copy the two JavaScript files over
 
-7. customise the list of images at the top of the file with the images you would like to feature in your gallery. The first string is the file name and the second string is the alt attribute, which is a short description of the image
+7. customise the list of images at the top of the scripts.js file with the images you would like to feature in your gallery. The first string is the file name and the second string is the alt attribute, which is a short description of the image
 
 ```
 const image_list = [
